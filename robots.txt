@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Private / Admin instructions (do not index admin notes or local scratch scripts)
+Disallow: /admin/
+
+Sitemap: https://xashima.com/sitemap.xml

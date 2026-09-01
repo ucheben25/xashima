@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+.npm/
+.next/
+.next
+
+# Large binary / media files (host separately e.g. cloud storage)
+*.mp4
+*.mov
+*.avi
+*.wmv
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs and Scratch
+update-contacts.js
+update-contact-quote.js
+*.log
+
+# Environment Variables (Keep sensitive info out of Git)
+.env
+.env.local
+.env.*.local

@@ -1,0 +1,307 @@
+/* ==========================================================================
+   XASHIMA RESPONSIVE CSS — Mobile-First Breakpoints
+   Breakpoints: 1200px / 992px / 768px / 480px
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1200px — Large Desktop Adjustments
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .footer-dark-grid {
+    grid-template-columns: 1.8fr 1fr 1fr 1fr;
+  }
+
+  .footer-dark-grid > *:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .projects-masonry {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   992px — Tablet Landscape
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  :root {
+    --header-height: 68px;
+  }
+
+  /* Navigation becomes mobile drawer */
+  .nav-menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0; right: 0;
+    background: var(--bg-main);
+    border-top: 1px solid var(--border-light);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 1rem 0 2rem;
+    box-shadow: var(--shadow-xl);
+    transform: translateX(-100%);
+    transition: transform var(--ease-normal);
+    z-index: 99;
+    overflow-y: auto;
+    max-height: calc(100vh - var(--header-height));
+  }
+
+  .nav-menu.active { transform: translateX(0); }
+
+  .nav-link {
+    color: var(--text-primary) !important;
+    width: 100%;
+    padding: 0.85rem 1.75rem;
+    border-bottom: 1px solid var(--border-light);
+    font-size: 0.975rem;
+  }
+
+  .nav-link.active::after { display: none; }
+
+  .mobile-nav-toggle { display: block; }
+
+  .header-actions .btn { display: none; }
+
+  .nav-item-dropdown .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    background: var(--bg-surface);
+    display: none;
+    padding-left: 1rem;
+  }
+
+  .nav-item-dropdown.active .dropdown-menu { display: block; }
+
+  /* Hero */
+  .hero-h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); }
+
+  /* Editorial Splits */
+  .editorial-split {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    direction: ltr !important;
+  }
+
+  .editorial-split.reverse { direction: ltr; }
+
+  .editorial-image-block img { height: 380px; }
+
+  .editorial-image-block .img-accent {
+    bottom: -1rem;
+    right: 1rem;
+    width: 38%;
+    height: 38%;
+  }
+
+  /* About */
+  .about-split {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-image-wrap img { height: 400px; }
+
+  .about-experience-badge {
+    left: 1rem;
+    top: -1.5rem;
+  }
+
+  /* Values */
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .value-block:nth-child(2),
+  .value-block:nth-child(4),
+  .value-block:nth-child(6) { border-right: none; }
+
+  .value-block:nth-child(3),
+  .value-block:nth-child(4) { border-bottom: 1px solid var(--border-light); }
+
+  .value-block:nth-child(5),
+  .value-block:nth-child(6) { border-bottom: none; }
+
+  /* Stats */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-item:nth-child(2) { border-right: none; }
+  .stat-item:nth-child(3) { border-right: 1px solid rgba(255,255,255,0.08); }
+  .stat-item:nth-child(1),
+  .stat-item:nth-child(2) {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 2rem;
+  }
+
+  /* Service showcase */
+  .service-showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-showcase-tile { height: 360px; }
+
+  /* Projects masonry */
+  .projects-masonry {
+    grid-template-columns: 1fr;
+  }
+
+  .project-tile.featured { grid-row: auto; }
+  .project-tile.featured img { height: 400px; }
+  .project-tile:not(.featured) img { height: 240px; }
+
+  /* Insights */
+  .insights-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .insight-lead-img { height: 360px; }
+
+  /* Why grid */
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Footer */
+  .footer-dark-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .footer-brand-col {
+    grid-column: 1 / -1;
+  }
+
+  .footer-dark-grid > *:last-child {
+    grid-column: auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   768px — Tablet Portrait / Large Mobile
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .section-pad { padding-block: var(--space-16); }
+  .section-pad-lg { padding-block: 3.5rem; }
+
+  /* Hero */
+  .hero-fullscreen { min-height: 100svh; }
+  .hero-h1 { font-size: clamp(2rem, 6vw, 2.75rem); max-width: 100%; }
+  .hero-description { font-size: var(--fs-base); max-width: 100%; }
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+  .hero-actions .btn { width: 100%; max-width: 320px; }
+  .hero-scroll-cue { display: none; }
+
+  /* Service showcase: single column */
+  .service-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-showcase-tile { height: 280px; }
+
+  /* Values */
+  .values-grid { grid-template-columns: 1fr; }
+
+  .value-block {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border-light) !important;
+  }
+
+  .value-block:last-child { border-bottom: none !important; }
+
+  /* Careers */
+  .careers-banner-content {
+    padding: 2rem;
+  }
+
+  .careers-banner-content h2 { font-size: var(--fs-2xl); }
+
+  /* Final CTA */
+  .final-cta-content h2 { font-size: var(--fs-3xl); }
+
+  /* Footer */
+  .footer-dark-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-brand-col { grid-column: auto; }
+
+  .footer-dark-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .footer-legal { justify-content: center; }
+
+  /* Page hero */
+  .page-hero-content h1 { font-size: var(--fs-3xl); }
+
+  /* Stats */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Why choose */
+  .why-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   480px — Small Mobile
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  :root { --header-height: 62px; }
+
+  .hero-h1 { font-size: clamp(1.75rem, 7vw, 2.25rem); }
+
+  .hero-actions .btn { max-width: 100%; }
+
+  .stats-grid { grid-template-columns: 1fr; }
+
+  .stat-item {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 1.5rem;
+  }
+
+  .stat-item:last-child { border-bottom: none; }
+
+  .why-grid { grid-template-columns: 1fr; }
+
+  .insights-sidebar .insight-card-sm img { width: 90px; height: 90px; }
+
+  .projects-filter-strip { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 0.25rem; }
+
+  .filter-btn { white-space: nowrap; }
+
+  .section-title { letter-spacing: -0.015em; }
+
+  /* Footer dark bottom */
+  .footer-dark-bottom p { font-size: 0.7rem; }
+
+  /* Service page hero */
+  .page-hero { padding-bottom: 2.5rem; }
+}
+
+/* --------------------------------------------------------------------------
+   Print
+   -------------------------------------------------------------------------- */
+@media print {
+  .header, .whatsapp-float, .cookie-banner, .hero-scroll-cue,
+  .final-cta-section, .careers-banner, .footer-dark { display: none !important; }
+
+  body { background: #FFF; color: #000; }
+  a { color: inherit; }
+  .container { max-width: 100%; padding: 0; }
+}
