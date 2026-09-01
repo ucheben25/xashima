@@ -1772,3 +1772,62 @@
   margin-bottom: 0.85rem;
 }
 
+/* 2-Column Homepage Services Grid */
+.services-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 860px) {
+  .services-grid-2col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Executive Leadership Headshots Framing */
+.leader-card-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background-color: #141414;
+}
+
+.leader-card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--ease-cinematic);
+}
+
+.von-card:hover .leader-card-img-wrapper img {
+  transform: scale(1.03);
+}
+
+.leader-img-wisdom {
+  object-fit: cover !important;
+  object-position: center 12% !important;
+}
+
+.leader-img-doreen {
+  object-fit: cover !important;
+  object-position: center 18% !important;
+}
+
+.leader-img-innocent {
+  object-fit: cover !important;
+  object-position: center 15% !important;
+}
+
+.leader-img-kingsley {
+  object-fit: cover !important;
+  object-position: center 15% !important;
+}
+
+.leader-img-onyekachi {
+  object-fit: cover !important;
+  object-position: center 12% !important;
+}
+

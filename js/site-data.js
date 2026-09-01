@@ -52,7 +52,7 @@
           'Long-span aluminum and step-tile sheet fabrication',
           'Coastal saltwater corrosion-resistant coatings',
           'Precision timber and steel roof truss framing',
-          'Comprehensive 10-year weatherproof warranty'
+          'Weather-resistant materials and expert installation'
         ],
         ctaText: 'View Service',
         head: 'Engr. Andrew Chisom Wisdom',
@@ -146,12 +146,12 @@
         tag: 'SURVEILLANCE',
         name: 'CCTV Camera Installation',
         shortDesc: 'High-definition IP surveillance camera installation, night-vision perimeter coverage, NVR storage, and mobile remote viewing.',
-        image: 'img/cctv-1.jpg',
+        image: 'img/cctv-camera 2.jpg',
         url: 'services/cctv-installation.html',
         features: [
-          '4K HD IP cameras with infrared night vision',
+          'HD IP cameras with infrared night vision',
           'Remote mobile and desktop video monitoring',
-          'NVR network storage with redundant backup',
+          'NVR network storage with backup capabilities',
           'Perimeter motion detection and alert triggers'
         ],
         ctaText: 'View Service',
@@ -317,58 +317,58 @@
       }
     ],
 
-    // ---- Milestones (Milestone 03 uses sheet-production.jpg) ----
+    // ---- Company Journey & Milestones (Milestone 03 uses sheet-production.jpg) ----
     milestones: [
       {
         num: 'MILESTONE 01',
-        year: '2012',
-        title: 'Corporate Foundation & Civil Renovation',
-        desc: 'XASHIMA was established in Aba, Abia State as a specialized civil renovation and building plastering contracting firm for commercial and residential properties.',
-        image: 'img/finished-building-aba.jpg',
+        tag: 'FOUNDATION',
+        title: 'Our Foundation',
+        desc: 'XASHIMA was established with a focus on providing practical construction, engineering and security solutions.',
+        image: 'img/renovation.jpg',
         highlights: [
-          'Initial team of dedicated structural technicians & masons',
-          'Delivery of first 15 residential refurbishment contracts',
-          'Establishment of rigorous material quality standards',
-          'Partnerships with top cement & steel distributors'
+          'Focus on structural durability and site safety',
+          'Establishment of quality material sourcing',
+          'Civil renovation and building maintenance services',
+          'Direct client-focused project supervision'
         ]
       },
       {
         num: 'MILESTONE 02',
-        year: '2016',
-        title: 'Expansion into Security & CCTV Networks',
-        desc: 'Launched the physical security division, importing certified armored steel doors and establishing specialized IP CCTV camera installation teams for commercial institutions.',
+        tag: 'EXPANSION',
+        title: 'Growing Capabilities',
+        desc: 'The company expanded its capabilities across construction, roofing, quantity surveying, renovation, electrical works and security installations.',
         image: 'img/security-door.jpg',
         highlights: [
-          'Introduction of EN certified armored security doors',
-          'Turnkey 4K IP CCTV surveillance network deployments',
-          'Biometric access control system integration',
-          'Commercial financial sector client acquisition'
+          'Armored security door supply and installation',
+          'IP CCTV camera and surveillance deployments',
+          'Quantity surveying and BOQ financial estimation',
+          'Commercial electrical and building finishing works'
         ]
       },
       {
         num: 'MILESTONE 03',
-        year: '2020',
-        title: 'Roofing Sheet Manufacturing Facility',
-        desc: 'Commissioned an in-house aluminum coil roll-forming factory, enabling direct production, sales, and installation of step-tile and long-span roofing sheets.',
+        tag: 'MANUFACTURING',
+        title: 'Roofing Sheet Production & Infrastructure',
+        desc: 'Equipped for direct production, sales, and installation of step-tile and long-span aluminum roofing sheets alongside structural framing.',
         image: 'img/sheet-production.jpg',
         highlights: [
-          'Factory-direct 0.55mm aluminum sheet roll-forming',
-          'Custom length cutting & color coating capabilities',
-          'Turnkey roof truss construction & leakproof guarantee',
-          'Wholesale distribution to regional developers'
+          'Aluminum sheet fabrication and custom cutting',
+          'Precision roof truss construction',
+          'Water collector and drainage system integration',
+          'Regional distribution and site delivery'
         ]
       },
       {
         num: 'MILESTONE 04',
-        year: '2026',
-        title: 'Integrated Engineering, Renovation & Cleaning Leader',
-        desc: 'Consolidated 11 core service offerings under one unified engineering framework, managing major commercial developments, facility maintenance, and sanitation contracts across Nigeria.',
+        tag: 'TODAY',
+        title: 'Today & Integrated Solutions',
+        desc: 'XASHIMA brings these 11 core capabilities together to serve residential, commercial and institutional clients in Aba, Abia State and surrounding areas.',
         image: 'img/finished-building-enugu.jpg',
         highlights: [
-          'Full 11-service integrated engineering capability',
-          'Over 350+ completed structural projects across Nigeria',
-          'Digital BOQ auditing & quantity surveying precision',
-          'Addition of professional Cleaning & Fumigation division'
+          'Comprehensive 11-service delivery capability',
+          'Residential, commercial, and institutional projects',
+          'Professional Cleaning & Fumigation division',
+          'Transparent project budgeting and milestone tracking'
         ]
       }
     ],
@@ -397,7 +397,7 @@
         category: 'roofing',
         categoryLabel: 'Roofing',
         summary: 'Custom long-span aluminum step-tile sheet production and precision timber roof truss framing for an expansive residential estate.',
-        image: 'img/sheet-production.jpg',
+        image: 'img/sheet-1.jpg',
         features: [
           'Long-span aluminum step-tile sheets',
           'Corrosion-resistant weather coating',
@@ -408,7 +408,7 @@
       {
         id: 'proj-3',
         title: 'Regional Commercial Facility Renovation',
-        location: 'Enugu Urban Corridor',
+        location: 'Enugu Commercial District, Enugu State',
         category: 'renovation',
         categoryLabel: 'Renovation',
         summary: 'Complete exterior wall plastering rendering, POP decorative false ceiling installation, and spatial structural reconfiguration.',
@@ -423,7 +423,7 @@
       {
         id: 'proj-4',
         title: 'Umuahia Industrial Park Electrical Overhaul',
-        location: 'Umuahia Industrial Estate, Abia State',
+        location: 'Umuahia Industrial Zone, Abia State',
         category: 'engineering',
         categoryLabel: 'Engineering',
         summary: 'Complete heavy-duty industrial wiring, main distribution board (MDB) assembly, and comprehensive surge grounding network setup.',
@@ -438,13 +438,13 @@
       {
         id: 'proj-5',
         title: 'Commercial Banking Security & IP CCTV Perimeter',
-        location: 'Aba Central Commercial District',
+        location: 'Aba Commercial District, Abia State',
         category: 'security',
         categoryLabel: 'Security',
-        summary: 'Installation of multi-lock armored steel vault doors and a 36-camera 4K IP CCTV digital surveillance network with remote telemetry.',
-        image: 'img/cctv-1.jpg',
+        summary: 'Installation of multi-lock armored steel vault doors and a high-definition IP CCTV digital surveillance network with centralized monitoring.',
+        image: 'img/cctv-camera 4.jpg',
         features: [
-          '36 4K IP cameras with night vision',
+          'High-definition IP cameras with night vision',
           'Armored steel security entryways',
           'Central NVR control room setup'
         ],
@@ -456,12 +456,12 @@
         location: 'Osisioma Industrial Zone, Aba',
         category: 'maintenance',
         categoryLabel: 'Maintenance',
-        summary: 'Large-scale roof rainwater collector installation, industrial gutter drainage channels, and quarterly preventative facility structural upkeep.',
-        image: 'img/building-maintenance.jpg',
+        summary: 'Large-scale roof rainwater collector installation, industrial gutter drainage channels, and preventative facility structural upkeep.',
+        image: 'img/maintenance-2.jpg',
         features: [
           'Perimeter rainwater collector gutters',
-          'Quarterly structural health audits',
-          'Emergency MEP repair support'
+          'Scheduled structural health audits',
+          'Facility maintenance and repair support'
         ],
         published: true
       }

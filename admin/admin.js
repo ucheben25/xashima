@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    XASHIMA Admin Panel — admin.js
    Passcode: xashima2026
    ============================================================ */
@@ -36,7 +36,7 @@
       { id: 3, name: 'Building Maintenance', tag: 'MAINTENANCE', img: '../img/building-maintenance.jpg', slug: '../services/building-maintenance.html' },
       { id: 4, name: 'Water Collector Installation', tag: 'PLUMBING', img: '../img/water-collector.jpg', slug: '../services/water-collector.html' },
       { id: 5, name: 'Security Door Installation', tag: 'SECURITY', img: '../img/security-door.jpg', slug: '../services/security-doors.html' },
-      { id: 6, name: 'CCTV Camera Installation', tag: 'SURVEILLANCE', img: '../img/cctv-1.jpg', slug: '../services/cctv-installation.html' },
+      { id: 6, name: 'CCTV Camera Installation', tag: 'SURVEILLANCE', img: '../img/cctv-camera 2.jpg', slug: '../services/cctv-installation.html' },
       { id: 7, name: 'Building Renovation', tag: 'RENOVATION', img: '../img/building-renovation-1.jpg', slug: '../services/building-renovation.html' },
       { id: 8, name: 'Building Plastering', tag: 'FINISHING', img: '../img/plastering.jpg', slug: '../services/building-plastering.html' },
       { id: 9, name: 'Electrical Engineering', tag: 'ELECTRICAL', img: '../img/electrical-1.jpg', slug: '../services/electrical-engineering.html' },
@@ -51,26 +51,26 @@
       { id: 5, name: 'Mr. Onyekachi', role: 'Head of Quantity Survey', img: '../img/onyekachi.jpg' }
     ],
     projects: [
-      { id: 1, title: 'Abayi Commercial Complex Roofing', category: 'roofing', location: 'Abayi, Aba, Abia State', img: '../img/sheet-production.jpg', status: 'Completed' },
-      { id: 2, title: 'Osisioma Industrial Security Installation', category: 'security', location: 'Osisioma, Aba, Abia State', img: '../img/security-door.jpg', status: 'Completed' },
-      { id: 3, title: 'Umuahia Office Block Renovation', category: 'renovation', location: 'Umuahia, Abia State', img: '../img/building-renovation-1.jpg', status: 'Completed' },
-      { id: 4, title: 'Aba Commercial CCTV Network', category: 'cctv', location: 'Enugu Commercial District, Enugu State', img: '../img/cctv-1.jpg', status: 'Completed' },
-      { id: 5, title: 'Umuahia Industrial Electrical Upgrade', category: 'electrical', location: 'Umuahia Industrial Estate, Abia State', img: '../img/electrical-1.jpg', status: 'Completed' },
-      { id: 6, title: 'Abayi Residential POP Design', category: 'pop', location: 'Abayi, Aba, Abia State', img: '../img/pop-installation.jpg', status: 'Completed' }
+      { id: 1, title: 'Abayi Commercial Plaza & Office Complex', category: 'renovation', location: 'Abayi, Aba, Abia State', img: '../img/finished-building-aba.jpg', status: 'Completed' },
+      { id: 2, title: 'Osisioma Residential Estate Roofing Installation', category: 'roofing', location: 'Osisioma Aba, Abia State', img: '../img/sheet-1.jpg', status: 'Completed' },
+      { id: 3, title: 'Regional Commercial Facility Renovation', category: 'renovation', location: 'Enugu Commercial District, Enugu State', img: '../img/finished-building-enugu.jpg', status: 'Completed' },
+      { id: 4, title: 'Aba Commercial CCTV Surveillance Network', category: 'cctv', location: 'Aba Commercial District, Abia State', img: '../img/cctv-camera 4.jpg', status: 'Completed' },
+      { id: 5, title: 'Umuahia Industrial Park Electrical Overhaul', category: 'electrical', location: 'Umuahia Industrial Zone, Abia State', img: '../img/electrical-1.jpg', status: 'Completed' },
+      { id: 6, title: 'Osisioma Industrial Warehouse & Rainwater Systems', category: 'maintenance', location: 'Osisioma Industrial Zone, Aba', img: '../img/maintenance-2.jpg', status: 'Completed' }
     ],
     insights: [
       { id: 1, title: '5 Signs Your Building Roof Needs Urgent Replacement', category: 'Roofing', date: '2026-08-20', img: '../img/sheet-production.jpg' },
       { id: 2, title: 'Why Every Construction Project Needs a Quantity Surveyor', category: 'Cost Control', date: '2026-08-15', img: '../img/quantity-survey-3.jpg' },
       { id: 3, title: 'Security Door Grades Explained: What to Choose for Your Property', category: 'Security', date: '2026-08-10', img: '../img/security-door.jpg' },
-      { id: 4, title: 'CCTV vs Smart Doorbell Cameras: Which Protects Your Business Better?', category: 'Surveillance', date: '2026-08-05', img: '../img/cctv-1.jpg' },
+      { id: 4, title: 'IP CCTV Architecture: Remote Monitoring for Multi-Site Facilities', category: 'Surveillance', date: '2026-08-05', img: '../img/cctv-camera 5.jpg' },
       { id: 5, title: 'Building Renovation Checklist: What to Inspect Before Starting', category: 'Renovation', date: '2026-07-30', img: '../img/building-renovation-1.jpg' },
       { id: 6, title: 'POP Ceiling Designs: Trends and Installation Tips for 2026', category: 'Interior', date: '2026-07-25', img: '../img/pop-installation.jpg' }
     ],
     milestones: [
-      { id: 1, year: '2012', title: 'Corporate Foundation & Civil Renovation', img: '../img/finished-building-aba.jpg' },
-      { id: 2, year: '2016', title: 'Expansion into Security & CCTV Networks', img: '../img/security-door.jpg' },
-      { id: 3, year: '2020', title: 'Roofing Sheet Manufacturing Facility', img: '../img/sheet-production.jpg' },
-      { id: 4, year: '2026', title: 'Integrated Engineering & Renovation Leader', img: '../img/finished-building-enugu.jpg' }
+      { id: 1, year: 'Phase 01', title: 'Our Foundation — Practical Engineering Solutions', img: '../img/renovation.jpg' },
+      { id: 2, year: 'Phase 02', title: 'Growing Capabilities across Construction & Security', img: '../img/security-door.jpg' },
+      { id: 3, year: 'Phase 03', title: 'Roofing Sheet Production & Structural Infrastructure', img: '../img/sheet-production.jpg' },
+      { id: 4, year: 'Phase 04', title: 'Today — Integrated Multi-Disciplinary Services', img: '../img/finished-building-enugu.jpg' }
     ],
     contact: {
       phone: '+234 810 743 2868',
