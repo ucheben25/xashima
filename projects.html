@@ -83,6 +83,55 @@
       color: #FFFFFF;
       border-color: var(--red-primary);
     }
+    /* Projects Page: Strict 2-Card Layout on Desktop */
+    .von-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    .von-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .von-card-img-wrapper {
+      position: relative;
+      width: 100%;
+      height: 280px;
+      overflow: hidden;
+    }
+    .von-card-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .von-card-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .von-card-footer {
+      margin-top: auto;
+    }
+    @media (max-width: 991px) {
+      .von-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+      .von-card-img-wrapper {
+        height: 240px;
+      }
+    }
+    @media (max-width: 767px) {
+      .von-card-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .von-card-img-wrapper {
+        height: 220px;
+      }
+    }
     .cta-banner-strip {
       background-color: var(--bg-surface-alt);
       border-top: 1px solid var(--border-light);
@@ -235,7 +284,7 @@
           <!-- Card 4 -->
           <article class="von-card project-card reveal" data-category="security">
             <div class="von-card-img-wrapper">
-              <img src="./img/cctv-1.jpg" alt="Corporate IP CCTV Surveillance Network Project" class="lightbox-trigger">
+              <img src="./img/cctv-4.jpg" alt="Corporate IP CCTV Surveillance Network Project" class="lightbox-trigger">
               <span class="von-card-tag">Security</span>
             </div>
             <div class="von-card-body">
@@ -250,7 +299,7 @@
               </ul>
               <div class="von-card-footer">
                 <span style="font-size: 0.8rem; color: var(--text-muted);">Ikoyi Financial District, Aba</span>
-                <button class="btn btn-outline-red btn-sm lightbox-trigger" data-src="./img/cctv-1.jpg">View Image</button>
+                <button class="btn btn-outline-red btn-sm lightbox-trigger" data-src="./img/cctv-4.jpg">View Image</button>
               </div>
             </div>
           </article>

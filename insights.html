@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
@@ -86,6 +86,55 @@
     @media (max-width: 600px) {
       .newsletter-form {
         flex-direction: column;
+      }
+    }
+    /* Insights Page: Strict 2-Card Layout on Desktop */
+    .von-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    .von-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .von-card-img-wrapper {
+      position: relative;
+      width: 100%;
+      height: 280px;
+      overflow: hidden;
+    }
+    .von-card-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .von-card-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .von-card-footer {
+      margin-top: auto;
+    }
+    @media (max-width: 991px) {
+      .von-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+      .von-card-img-wrapper {
+        height: 240px;
+      }
+    }
+    @media (max-width: 767px) {
+      .von-card-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .von-card-img-wrapper {
+        height: 220px;
       }
     }
   </style>
@@ -244,7 +293,7 @@
           <!-- Article Card 5 -->
           <article class="von-card reveal">
             <div class="von-card-img-wrapper">
-              <img src="./img/cctv-1.jpg" alt="IP CCTV Network Architecture Article" class="lightbox-trigger">
+              <img src="./img/cctv-3.jpg" alt="IP CCTV Network Architecture Article" class="lightbox-trigger">
               <span class="von-card-tag">Surveillance Systems</span>
             </div>
             <div class="von-card-body">
