@@ -289,7 +289,11 @@
   height: 100%;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 1.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), visibility 1.2s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: opacity;
 }
 
@@ -299,53 +303,89 @@
   z-index: 1;
 }
 
-.hero-bg-image {
+/* Ambient Blurred Background (Matches slide tone) */
+.hero-bg-ambient {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  inset: -30px;
+  width: calc(100% + 60px);
+  height: calc(100% + 60px);
   object-fit: cover;
   object-position: center;
-  transition: transform 7s ease-out;
+  filter: blur(32px) brightness(0.28);
+  transform: scale(1.08);
+  pointer-events: none;
 }
 
-.hero-slide.active .hero-bg-image {
-  transform: scale(1.05);
+/* Zoomed-Out Full-Length & Full-Width Foreground Image */
+.hero-fg-image {
+  position: relative;
+  z-index: 1;
+  max-width: 92%;
+  max-height: 86vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  filter: drop-shadow(0 14px 40px rgba(0, 0, 0, 0.75));
+  transition: transform 6s ease-out;
+  margin: auto;
+}
+
+.hero-slide.active .hero-fg-image {
+  transform: scale(1.02);
+}
+
+@media (min-width: 1024px) {
+  .hero-slide .hero-fg-image {
+    position: absolute;
+    right: 4%;
+    top: 50%;
+    transform: translateY(-50%) scale(1);
+    max-width: 46%;
+    max-height: 78vh;
+  }
+  .hero-slide.active .hero-fg-image {
+    transform: translateY(-50%) scale(1.03);
+  }
 }
 
 .hero-carousel-indicators {
   position: absolute;
-  bottom: 2.5rem;
-  right: 3rem;
+  bottom: 2rem;
+  right: 2.5rem;
   z-index: 4;
   display: flex;
-  gap: 0.6rem;
+  gap: 0.35rem;
   align-items: center;
+  max-width: 90vw;
+  overflow-x: auto;
+  padding: 0.25rem;
 }
 
 .hero-indicator {
-  width: 28px;
+  width: 14px;
   height: 4px;
   background: rgba(255, 255, 255, 0.35);
   border: none;
   border-radius: 2px;
   cursor: pointer;
   padding: 0;
+  flex-shrink: 0;
   transition: all var(--ease-normal);
 }
 
 .hero-indicator:hover {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .hero-indicator.active {
-  width: 48px;
+  width: 28px;
   background: var(--red-primary);
 }
 
 @media (max-width: 768px) {
   .hero-carousel-indicators {
-    bottom: 1.75rem;
+    bottom: 1.25rem;
     right: 50%;
     transform: translateX(50%);
   }
@@ -357,10 +397,11 @@
   z-index: 2;
   background: linear-gradient(
     105deg,
-    rgba(0, 0, 0, 0.82) 0%,
-    rgba(0, 0, 0, 0.58) 55%,
+    rgba(0, 0, 0, 0.88) 0%,
+    rgba(0, 0, 0, 0.65) 50%,
     rgba(0, 0, 0, 0.35) 100%
   );
+  pointer-events: none;
 }
 
 .hero-content-wrap {
@@ -368,6 +409,126 @@
   z-index: 3;
   width: 100%;
   padding-top: var(--header-height);
+  padding-bottom: 2rem;
+}
+
+/* --------------------------------------------------------------------------
+   EMBEDDED SECURITY DOORS SHOWCASE ON HERO
+   -------------------------------------------------------------------------- */
+.hero-doors-embed {
+  margin-top: 2rem;
+  background: rgba(18, 18, 18, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--radius-lg);
+  padding: 1.15rem 1.35rem;
+  max-width: 580px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+}
+
+.hero-doors-embed-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.hero-doors-badge {
+  background: var(--red-primary);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+}
+
+.hero-doors-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+}
+
+.hero-doors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.65rem;
+}
+
+.hero-door-thumb {
+  display: block;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: transform var(--ease-fast), border-color var(--ease-fast), box-shadow var(--ease-fast);
+}
+
+.hero-door-thumb:hover {
+  transform: translateY(-3px);
+  border-color: var(--red-primary);
+  box-shadow: 0 6px 18px rgba(200, 16, 46, 0.45);
+}
+
+.hero-door-thumb img {
+  width: 100%;
+  height: 84px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform var(--ease-normal);
+}
+
+.hero-door-thumb:hover img {
+  transform: scale(1.08);
+}
+
+.hero-door-thumb .door-label {
+  display: block;
+  padding: 0.3rem 0.2rem;
+  font-size: 0.65rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.hero-doors-footer {
+  margin-top: 0.65rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-doors-link {
+  color: var(--red-primary);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color var(--ease-fast);
+}
+
+.hero-doors-link:hover {
+  color: #FFFFFF;
+}
+
+@media (max-width: 600px) {
+  .hero-doors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-door-thumb img {
+    height: 72px;
+  }
 }
 
 .hero-eyebrow {
