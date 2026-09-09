@@ -1,4 +1,4 @@
-/* ==========================================================================
+﻿/* ==========================================================================
    XASHIMA RESPONSIVE CSS — Mobile-First Breakpoints
    Breakpoints: 1200px / 992px / 768px / 480px
    ========================================================================== */
@@ -208,45 +208,62 @@
   .section-pad-lg { padding-block: 3.75rem; }
   .section-header-centered { margin-bottom: 2rem; }
 
-  /* Hero */
+  /* Hero - mobile precision layout (680-780px total) */
   .hero-fullscreen {
-    min-height: 88svh;
+    min-height: 680px;
+    height: auto;
+    max-height: 780px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    overflow: hidden;
   }
   .hero-content-wrap {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: calc(var(--header-height) + 20px);
+    padding-bottom: 28px;
+    padding-left: 24px;
+    padding-right: 24px;
+    width: 100%;
+    box-sizing: border-box;
   }
   .hero-eyebrow {
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     letter-spacing: 0.1em;
-    margin-bottom: 0.85rem;
+    margin-bottom: 14px;
   }
   .hero-h1 {
-    font-size: clamp(1.85rem, 5.5vw, 2.45rem);
-    line-height: 1.16;
-    margin-bottom: 1rem;
+    font-size: clamp(2.375rem, 7vw, 2.75rem);
+    line-height: 1.08;
+    margin-bottom: 12px;
     max-width: 100%;
+    letter-spacing: -0.025em;
   }
   .hero-description {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+    font-size: 1.0rem;
+    line-height: 1.5;
+    margin-bottom: 18px;
     max-width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   .hero-actions {
     display: flex;
-    flex-direction: row;
-    gap: 0.75rem;
+    flex-direction: column;
+    gap: 12px;
     width: 100%;
-    flex-wrap: wrap;
   }
   .hero-actions .btn {
-    flex: 1 1 140px;
+    width: 100%;
     text-align: center;
-    padding: 0.75rem 1.25rem;
-    font-size: var(--fs-sm);
+    padding: 0 1.5rem;
+    height: 56px;
+    line-height: 56px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
   }
   .hero-scroll-cue { display: none; }
 
@@ -341,28 +358,35 @@
   .section-pad-lg { padding-block: 2.75rem; }
   .section-header-centered { margin-bottom: 1.5rem; }
 
-  /* Hero */
+  /* Hero - small mobile (320-480px) */
   .hero-fullscreen {
-    min-height: 84svh;
+    min-height: 620px;
+    max-height: 750px;
+  }
+  .hero-content-wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 24px;
   }
   .hero-h1 {
-    font-size: clamp(1.55rem, 5.8vw, 1.95rem);
-    line-height: 1.18;
-    margin-bottom: 0.85rem;
+    font-size: clamp(2.0rem, 8vw, 2.375rem);
+    line-height: 1.1;
+    margin-bottom: 10px;
   }
   .hero-description {
-    font-size: 0.875rem;
-    line-height: 1.55;
-    margin-bottom: 1.25rem;
+    font-size: 0.925rem;
+    line-height: 1.48;
+    margin-bottom: 16px;
   }
   .hero-actions {
     flex-direction: column;
-    gap: 0.65rem;
+    gap: 10px;
   }
   .hero-actions .btn {
     width: 100%;
-    max-width: 100%;
-    padding: 0.75rem 1rem;
+    height: 54px;
+    line-height: 54px;
+    font-size: 0.875rem;
   }
 
   /* Cards */
@@ -409,4 +433,39 @@
   body { background: #FFF; color: #000; }
   a { color: inherit; }
   .container { max-width: 100%; padding: 0; }
+}
+
+
+/* --------------------------------------------------------------------------
+   390px - iPhone 14/15/Pro class fine-tune
+   -------------------------------------------------------------------------- */
+@media (max-width: 390px) {
+  .hero-fullscreen {
+    min-height: 600px;
+    max-height: 720px;
+  }
+  .hero-content-wrap {
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 20px;
+  }
+  .hero-eyebrow {
+    margin-bottom: 10px;
+  }
+  .hero-h1 {
+    font-size: clamp(1.9rem, 9vw, 2.2rem);
+    margin-bottom: 8px;
+  }
+  .hero-description {
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+  }
+  .hero-actions {
+    gap: 9px;
+  }
+  .hero-actions .btn {
+    height: 52px;
+    line-height: 52px;
+    font-size: 0.85rem;
+  }
 }
