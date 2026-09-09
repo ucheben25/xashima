@@ -189,16 +189,71 @@
    768px — Tablet Portrait / Large Mobile
    -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
-  .section-pad { padding-block: var(--space-16); }
-  .section-pad-lg { padding-block: 3.5rem; }
+  :root {
+    --header-height: 64px;
+  }
+
+  .header-actions { gap: 0.5rem; }
+  .header-actions .btn { display: none; }
+  .theme-toggle-btn { width: 34px; height: 34px; }
+  .mobile-nav-toggle { display: block; font-size: 1.35rem; padding: 0.25rem; }
+
+  .logo-img {
+    height: 42px;
+    max-height: 42px;
+  }
+
+  .section-pad { padding-block: 3.25rem; }
+  .section-pad-sm { padding-block: 2.25rem; }
+  .section-pad-lg { padding-block: 3.75rem; }
+  .section-header-centered { margin-bottom: 2rem; }
 
   /* Hero */
-  .hero-fullscreen { min-height: 100svh; }
-  .hero-h1 { font-size: clamp(2rem, 6vw, 2.75rem); max-width: 100%; }
-  .hero-description { font-size: var(--fs-base); max-width: 100%; }
-  .hero-actions { flex-direction: column; align-items: flex-start; }
-  .hero-actions .btn { width: 100%; max-width: 320px; }
+  .hero-fullscreen {
+    min-height: 88svh;
+    display: flex;
+    align-items: center;
+  }
+  .hero-content-wrap {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.85rem;
+  }
+  .hero-h1 {
+    font-size: clamp(1.85rem, 5.5vw, 2.45rem);
+    line-height: 1.16;
+    margin-bottom: 1rem;
+    max-width: 100%;
+  }
+  .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+  }
+  .hero-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .hero-actions .btn {
+    flex: 1 1 140px;
+    text-align: center;
+    padding: 0.75rem 1.25rem;
+    font-size: var(--fs-sm);
+  }
   .hero-scroll-cue { display: none; }
+
+  /* Cards */
+  .von-card-body { padding: 1.35rem; }
+  .von-card-title { font-size: 1.15rem; }
+  .von-card-img-wrapper { height: 205px; }
 
   /* Service showcase: single column */
   .service-showcase-grid {
@@ -228,8 +283,15 @@
   .final-cta-content h2 { font-size: var(--fs-3xl); }
 
   /* Footer */
+  .footer-dark {
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+  }
+
   .footer-dark-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
   }
 
   .footer-brand-col { grid-column: auto; }
@@ -261,18 +323,61 @@
    480px — Small Mobile
    -------------------------------------------------------------------------- */
 @media (max-width: 480px) {
-  :root { --header-height: 62px; }
+  :root {
+    --header-height: 60px;
+  }
 
-  .hero-h1 { font-size: clamp(1.75rem, 7vw, 2.25rem); }
+  .container {
+    padding-inline: 1rem;
+  }
 
-  .hero-actions .btn { max-width: 100%; }
+  .logo-img {
+    height: 38px;
+    max-height: 38px;
+  }
+
+  .section-pad { padding-block: 2.5rem; }
+  .section-pad-sm { padding-block: 1.75rem; }
+  .section-pad-lg { padding-block: 2.75rem; }
+  .section-header-centered { margin-bottom: 1.5rem; }
+
+  /* Hero */
+  .hero-fullscreen {
+    min-height: 84svh;
+  }
+  .hero-h1 {
+    font-size: clamp(1.55rem, 5.8vw, 1.95rem);
+    line-height: 1.18;
+    margin-bottom: 0.85rem;
+  }
+  .hero-description {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    margin-bottom: 1.25rem;
+  }
+  .hero-actions {
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.75rem 1rem;
+  }
+
+  /* Cards */
+  .von-card-body { padding: 1.15rem; }
+  .von-card-img-wrapper { height: 185px; }
+  .von-card-title { font-size: 1.1rem; }
+  .card-features-list { margin-bottom: 1.15rem; gap: 0.4rem; }
+  .card-features-list li { font-size: 0.82rem; }
 
   .stats-grid { grid-template-columns: 1fr; }
 
   .stat-item {
     border-right: none !important;
     border-bottom: 1px solid rgba(255,255,255,0.08);
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
 
   .stat-item:last-child { border-bottom: none; }
@@ -285,7 +390,7 @@
 
   .filter-btn { white-space: nowrap; }
 
-  .section-title { letter-spacing: -0.015em; }
+  .section-title { letter-spacing: -0.015em; font-size: var(--fs-2xl); }
 
   /* Footer dark bottom */
   .footer-dark-bottom p { font-size: 0.7rem; }
